@@ -1,0 +1,98 @@
+@import "_color.less";
+
+.progress {
+    padding: 0 20px;
+    background: #fff;
+    &-total {
+      color: @color-theme;
+      font-size: 16px;
+      text-align: right;
+    }
+    &-dash {
+      position: relative;
+      height: 4px;
+      background: linear-gradient(to right, #eee, #eee 5px, transparent 5px, transparent);
+      background-size: 10px 100%;
+    }
+    &-inner {
+      position: absolute;
+      width: 0;
+      height: 100%;
+      background: @color-theme;
+      transition: width .6s;
+      border-radius: 2px;
+    }
+}
+.highcharts-xaxis .highcharts-axis-line {
+    stroke-width: 2;
+    stroke-dasharray: 3 3;
+}
+
+.flex {
+  display:flex;
+  align-items:center
+}
+
+.flex1 {
+  .item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+    &+.item:before {
+      position: absolute;
+      content: '';
+      display: flex;
+      width: 2px;
+      height: 40%;
+      top: 30%;
+      background: #eee;
+    }
+    p {
+      line-height: .8;
+      font-weight: 600;
+    }
+    .data {
+      color: @color-font-data;
+      font-size: 18px;
+    }
+  }
+}
+
+.sb {
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.column {
+  flex-direction: column;
+  padding: 16px 25px;
+}
+
+#datepicker {
+  border: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  color: @color-theme;
+}
+.datepicker {
+  border: 0;
+  width: 100vw;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  color: @color-theme;
+  background: #fff;
+}
+#selected {
+  font-size: 16px;
+  background: #fff;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.card_icon {
+  width: 20px;
+  // vertical-align: middle;
+  margin-right: 6px;
+}

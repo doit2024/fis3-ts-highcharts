@@ -1,0 +1,71 @@
+@import "_color.less";
+
+.tab {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  height: 34px;
+  .item {
+    position: relative;
+    width: 20%;
+    text-align: center;
+    margin-top: 10px;
+    transition: all .3s;
+    &:after {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 60px;
+      // background: #f00;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &+.item {
+      border-left: 2px solid #eee;
+    }
+    &.active {
+      color: @color-theme;
+      font-weight: bold;
+      width: 26%;
+      font-size: 16px;
+    }
+  }
+}
+.highcharts-tooltip>span>span {
+  color: #fff !important;
+}
+.highcharts-tooltip-box>span>span {
+  color: #fff !important;
+}
+.highcharts-legend-item>text {
+  fill: #485b6d !important;
+}
+
+.intro {
+  display: flex;
+  width: 110%;
+  .item {
+    flex: 1;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 2.5;
+    border-radius: 1px;
+    span {
+      display: block;
+      transform: scale(0.8);
+    }
+    &+.item {
+      margin-left: 5px;
+    }
+    &:nth-child(1) { background: #d8d8d8; }
+    &:nth-child(2) { background: #4098e2; }
+    &:nth-child(3) { background: #00d977; }
+    &:nth-child(4) { background: #fbb900; }
+    &:nth-child(5) { background: #ed682f; }
+    &:nth-child(6) { background: #df1d5f; }
+  }
+}

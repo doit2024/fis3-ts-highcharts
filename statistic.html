@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>统计</title>
+    <link rel="stylesheet" href="/css/common.less">
+    <link rel="stylesheet" href="/css/statistic.less">
+</head>
+<body>
+    <div class="container">
+        <div id="tab" class="tab">
+            <div class="item active" data-type="1">日</div>
+            <div class="item" data-type="2">周</div>
+            <div class="item" data-type="3">月</div>
+        </div>
+        <div id="chartBar" style="width: 100%;height:230px;"></div>
+        <div class="card flex1" id="tongji"></div>
+        <div class="card sb" id="shichang"></div>
+        <div class="card column">
+            <div id="chartLineRulerXinLv" style="width: 100%;height:130px;"></div>
+            <div class="card-content f-12">
+                心率变化反映出机体运动中的功能水平、能量代谢、训练负荷强度及身体功能恢复程度，循序渐进，切勿过度锻炼。
+            </div>
+            <div class="card-bottom">
+                <div id="xinlv"></div>
+                <div class="tr">
+                    <p><b class="f-gray f-12">手指触摸图表显示滑动标尺</b></p>
+                    <p><b><span class="f-p" id="xinlvfanwei"></span>mbp</b></p>
+                </div>
+            </div>
+            <hr style="width:100%;margin-top: 20px;border:0;height:2px;background-color:#e9ecf0">
+            <div id="chartPie" style="width: 100%;height:220px;"></div>
+            <div class="intro">
+                <div class="item"><span>不在区间</span></div>
+                <div class="item"><span>100-120</span></div>
+                <div class="item"><span>120-140</span></div>
+                <div class="item"><span>140-160</span></div>
+                <div class="item"><span>160-180</span></div>
+                <div class="item"><span>180-200</span></div>
+            </div>
+        </div>
+        <div class="card column">
+            <div id="chartLineRulerPeiSu" style="width: 100%;height:130px;"></div>
+            <div class="card-content f-12">
+                每个人的速度与个人体能等因素息息相关，建议循序渐进，持续保持健康状态。
+            </div>
+            <div class="card-bottom">
+                <div id="sudu"></div>
+                <div class="tr">
+                    <p><b class="f-gray f-12">手指触摸图表显示滑动标尺</b></p>
+                    <p><b><span class="f-p" id="pingjunsudu"></span>km/h</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="card column">
+            <div id="chartLineRulerYinShui" style="width: 100%;height:130px;"></div>
+            <div class="card-content f-12">
+                每个人的饮水量与运动强度、时长、类型、年龄体重等息息相关，并没有统一的标准值。
+            </div>
+            <div class="card-bottom">
+                <div id="yinshui"></div>
+                <div class="tr">
+                    <p><b class="f-gray f-12">手指触摸图表显示滑动标尺</b></p>
+                    <p><b>平均饮水量<span class="f-p" id="pingjunyinshui"></span>L</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="card column">
+            <div id="chartLineRulerDaiXie" style="width: 100%;height:130px;"></div>
+            <div class="card-content f-12">
+                再生值是人体新陈代谢再生的数值，通过个人数据进行计算得出， 并没有统一的标准值。
+            </div>
+            <div class="card-bottom">
+                <div id="daixie"></div>
+                <div class="tr">
+                    <p><b class="f-gray f-12">手指触摸图表显示滑动标尺</b></p>
+                    <p><b>平均代谢值 <span class="f-p" id="pingjundaixie"></span>%</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="/lib/options.ts"></script>
+    <script src="/lib/ajax.ts"></script>
+    <script src="/lib/Tpl.class.ts"></script>
+    <script src="/lib/mock.ts"></script>
+    <script src="/lib/statistic.ts"></script>
+</body>
+</html>

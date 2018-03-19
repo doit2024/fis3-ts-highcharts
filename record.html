@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>记录</title>
+    <link rel="stylesheet" href="/css/common.less">
+    <link rel="stylesheet" href="/css/record.less">
+</head>
+<body>
+    <div class="container">
+        <input id="datepicker" type="text" readonly="" value="今天" >
+        <div class="progress" id="progress"></div>
+        <div id="selected"></div>
+        <div id="chartBar" style="width: 100%;height:230px;"></div>
+        <div class="card flex1" id="tongji"></div>
+        <div class="card sb">
+            <b>时长</b>
+            <b><span class="f-warn">1</span>小时<span class="f-warn">10</span>分</b>
+        </div>
+        <div class="card column">
+            <div id="chartLineXinLv" style="width: 100%;height:130px;"></div>
+            <div class="card-bottom flex">
+                <b class="flex"><img class="card_icon" src="./img/xinlv.png">心率</b>
+                <b><span class="f-p">80-120</span>mbp</b>
+            </div>
+        </div>
+        <div class="card column">
+            <div id="chartLinePeiSu" style="width: 100%;height:130px;"></div>
+            <div class="card-bottom flex">
+                <b class="flex"><img class="card_icon" src="./img/xranzhi.png">平均配速</b>
+                <b><span class="f-b">10</span>km/h</b>
+            </div>
+        </div>
+        <div class="card column">
+            <div id="chartLineYinShui" style="width: 100%;height:130px;"></div>
+            <div class="card-bottom flex">
+                <b class="flex"><img class="card_icon" src="./img/yinshui.png">饮水量</b>
+                <b><span class="f-g">4</span>L</b>
+            </div>
+        </div>
+        <div class="card column">
+            <div id="chartLineDaiXie" style="width: 100%;height:130px;"></div>
+            <div class="card-bottom flex">
+                <b class="flex"><img class="card_icon" src="./img/daixie.png">代谢值</b>
+                <b><span class="f-p">70</span>%</b>
+            </div>
+        </div>
+    </div>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script src="/lib/datePicker.js"></script>
+    <script src="/lib/options.ts"></script>
+    <script src="/lib/ajax.ts"></script>
+    <script src="/lib/Tpl.class.ts"></script>
+    <script src="/lib/mock.ts"></script>
+    <script src="/lib/record.ts"></script>
+</body>
+</html>

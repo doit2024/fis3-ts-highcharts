@@ -1,0 +1,47 @@
+@import "_color.less";
+
+html {
+  font-size: 14px;
+}
+
+body {
+  color: @color-font-default;
+  background: @color-background-global;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tr {
+  text-align: right
+}
+
+.f {
+  &-12 { font-size: 12px; }
+  &-warn { color: @color-warn; }
+  &-p { color: @color-pink; }
+  &-b { color: @color-blue; }
+  &-g { color: @color-green; }
+  &-gray { color: @color-gray; }
+}
+
+.mt {
+  &-20 { margin-top: 20px }
+}
+
+.card {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: @color-background-card;
+  width: 90%;
+  margin: 10px auto 16px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px 6px #eee;
+  min-height: 66px;
+  &-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
